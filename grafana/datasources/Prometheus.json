@@ -1,7 +1,6 @@
 {
     "name":"Prometheus",
     "type":"prometheus",
-    "url":"http://prometheus:9090",
-    "access":"proxy",
+    "url":"http://hur-quest-40:9090",    
     "basicAuth":false
   }

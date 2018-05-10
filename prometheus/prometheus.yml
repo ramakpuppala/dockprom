@@ -13,20 +13,25 @@ rule_files:
 
 # A scrape configuration containing exactly one endpoint to scrape.
 scrape_configs:
-  - job_name: 'nodeexporter'
+  - job_name: 'wmiexporter'
     scrape_interval: 5s
     static_configs:
-      - targets: ['nodeexporter:9100']
+      - targets: ['colb-57xnm22.det.root.detma.org:9182']
+
+  - job_name: 'docker'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['colb-57xnm22.det.root.detma.org:9323']
 
   - job_name: 'cadvisor'
     scrape_interval: 5s
     static_configs:
-      - targets: ['cadvisor:8080']
+      - targets: ['hur-quest-40:9091']
 
   - job_name: 'prometheus'
     scrape_interval: 10s
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['hur-quest-40:9090']
 
 alerting:
   alertmanagers:
@@ -34,13 +39,3 @@ alerting:
     static_configs:
     - targets: 
       - 'alertmanager:9093'
-
-#  - job_name: 'nginx'
-#    scrape_interval: 10s
-#    static_configs:
-#      - targets: ['nginxexporter:9113']
-
-#  - job_name: 'aspnetcore'
-#    scrape_interval: 10s
-#    static_configs:
-#      - targets: ['eventlog-proxy:5000', 'eventlog:5000']

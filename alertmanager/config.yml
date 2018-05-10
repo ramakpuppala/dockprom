@@ -1,11 +1,11 @@
 route:
-    receiver: 'slack'
+    receiver: 'mattermost'
 
 receivers:
-    - name: 'slack'
+    - name: 'mattermost'
       slack_configs:
           - send_resolved: true
             text: "{{ .CommonAnnotations.description }}"
             username: 'Prometheus'
             channel: '#<channel-name>'
-            api_url: 'https://hooks.slack.com/services/<webhook-id>'
+            api_url: 'https://hur-quest-40:9443/hooks/<webhook-id>'
