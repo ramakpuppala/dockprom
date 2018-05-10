@@ -2,7 +2,7 @@ dockprom
 ========
 
 A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor), 
-[NodeExporter](https://github.com/prometheus/wmi_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
+[wmi_exporter](https://github.com/martinlindhe/wmi_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
 
 ***If you're looking for the Docker Swarm version please go to [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)***
 
